@@ -1,3 +1,9 @@
-body {
-  font-family: sans-serif;
+$titleFont: 'PT Serif';
+$bodyFont: 'Work Sans';
+
+footer {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
 }

@@ -11,18 +11,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
-      <h1><%= link_to "Rails Task Manager", root_path %></h1>
+  <body class="d-flex flex-column h-100">
+    <header class="mb-5">
       <nav>
+        <h1><%= link_to "Rails Task Manager", root_path %></h1>
         <%= link_to "Add new task", new_task_path %>
       </nav>
     </header>
 
-    <%= yield %>
+    <div class="content-wrap ">
+      <div class="container">
+        <%= yield %>      
+      </div>
+    </div>
     
-    <footer>
-      <p>Copyright 2021 - Rails Task Manager</p>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Copyright 2021 - Rails Task Manager</span>
+      </div>
     </footer>
   </body>
 </html>
