@@ -11,8 +11,7 @@
   </p>
 
   <p>
-    <%= hidden_field_tag :completed, '' %>
-    <%= check_box_tag :completed, checked = true %>
+    <%= f.check_box :completed, { checked: true }, 'true', 'false' %>
     <%= f.label :completed %>
   </p>
 

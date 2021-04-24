@@ -11,7 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100 position-relative">
     <header class="mb-5">
       <nav>
         <h1><%= link_to "Rails Task Manager", root_path %></h1>
@@ -25,7 +25,7 @@
       </div>
     </div>
     
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3 bg-light position-fixed bottom-0 start-0 col-12">
       <div class="container">
         <span class="text-muted">Copyright 2021 - Rails Task Manager</span>
       </div>
