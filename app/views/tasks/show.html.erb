@@ -1,0 +1,26 @@
+<h2><%= @task.title %></h2>
+
+<div class="details">
+  <p><%= simple_format @task.details %></p>
+</div>
+
+<div class="actions">
+  <div class="complete">
+    <%= form_for @task do |f| %>
+      <p>
+        <%= hidden_field_tag :completed, '' %>
+        <%= check_box_tag :completed, checked = true %>
+        <%= f.label :completed %>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="edit">
+    <%= link_to "Edit task", edit_task_path(@task) %>
+  </div>
+  
+  <div class="delete">
+    <%= link_to "Delete task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+
+</div>

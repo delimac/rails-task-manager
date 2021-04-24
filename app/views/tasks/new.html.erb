@@ -1,25 +1,3 @@
 <h3>Add a new task</h3>
 
-<%= form_for @task do |f| %>
-
-  <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :details %> <br>
-    <%= f.text_area :details %>
-  </p>
-
-  <p>
-    <%= hidden_field_tag :completed, '' %>
-    <%= check_box_tag :completed, checked = true %>
-    <%= f.label :completed %>
-  </p>
-
-  <p>
-    <%= f.submit 'Create task' %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
